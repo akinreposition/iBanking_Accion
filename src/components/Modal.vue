@@ -8,8 +8,8 @@
                 aria-describedby="modalDescription"
             >
                 <header class="modal-header" id="modalTitle">
-                     <h3 class="text-center text-lg leading-normal mt-8 font-bold justify-center align-middle md:ml-10"><slot name="header">Default Header</slot></h3>
-                    <p class="text-center text-lg leading-normal mt-4 font-normal justify-center align-middle md:ml-10"><slot name="sub-header">Default Sub header</slot></p>
+                     <h3 class="text-center text-lg leading-normal mt-8 font-bold justify-center align-middle md:ml-10"><slot name="header"></slot></h3>
+                    <p class="text-center text-lg leading-normal mt-4 font-normal justify-center align-middle md:ml-10"><slot name="sub-header"></slot></p>
 
                     <!-- <button 
                         type="button"

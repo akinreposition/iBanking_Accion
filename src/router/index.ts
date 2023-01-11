@@ -45,6 +45,24 @@ const router = createRouter({
 			name:'ConfirmTransaction',
 			component: () => import('../views/airtimeAndDataPayment/ConfirmTransaction.vue')
 		},
+		// Bill Payment Ends
+
+		// Fund Transfer Begins
+		{
+			path:"/funds-transfer/send-money",
+			name:'SendMoney',
+			component: () => import('../views/fundsTransfer/SendMoney.vue')
+		},
+		{
+			path:"/funds-transfer/other-banks",
+			name:'OtherBanks',
+			component: () => import('../views/fundsTransfer/OtherBanks.vue')
+		},
+		{
+			path:"/funds-transfer/transaction-details",
+			name:'FundTransactionDetails',
+			component: () => import('../views/fundsTransfer/FundTransactionDetail.vue')
+		},
 	]
 	// const router = createRouter({
 	// 	history: createWebHistory(),

@@ -6,11 +6,11 @@
     
 
         <div class="inline-flex items-start mt-[100px] justify-start">
-            <router-link to="/funds-transfer/send-money" class="mt-6 flex items-center justify-center md:w-40  p-2.5 border rounded-tl-lg rounded-bl-lg border-primary bg-primary">
-                <span class="text-sm font-bold  leading-tight text-white">Accion Accounts</span>
+            <router-link to="/funds-transfer/send-money" class="mt-6 flex items-center justify-center md:w-40  p-2.5 border rounded-tl-lg rounded-bl-lg border-primary ">
+                <span class="text-sm font-bold  leading-tight text-gray-400">Accion Accounts</span>
             </router-link>
-            <router-link to="/funds-transfer/other-banks" class="mt-6 flex items-center justify-center md:w-40 p-2.5 border rounded-tr-lg rounded-br-lg border-primary">
-                <span class="text-sm font-bold leading-tight text-gray-400">Other Banks</span>
+            <router-link to="/funds-transfer/other-banks" class="mt-6 flex items-center justify-center md:w-40 p-2.5 border rounded-tr-lg rounded-br-lg border-primary bg-primary">
+                <span class="text-sm font-bold leading-tight text-white">Other Banks</span>
             </router-link>
         </div>
 
@@ -32,7 +32,7 @@
     import BackArrow from '../../components/BackArrow.vue';
 
 export default {
-    name: 'SendMoney',
+    name: 'OtherBanks',
     components: {
         Beneficiaries,
         Form,

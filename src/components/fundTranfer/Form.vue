@@ -5,28 +5,24 @@
                 <label class="text-gray-400 font-bold">{{ firstLabel }}</label>
                 <div class="flex flex-row">
                     <input 
-                    type="tel"
-                    class="w-40 h-8 mt-1 block rounded p-5 font-bold bg-gray-200"
+                    type="number"
+                    class="w-72 h-8 mt-1 block rounded p-5 bg-gray-200"
                     required
-                    placeholder="Phone number"
-                    maxlength="11"
                     @handleFirstInputChange="firstInput"
                     />
-                    <section class="w-10 h-8 mt-2 ml-14 px-auto  block rounded justify-center bg-gray-200">
-                        <img class="mx-auto h-7 pt-1.5" src="../../assets/img/icon/Contacts.svg" />
-                    </section> 
+                     
                 </div> 
             </div>
             <div class="mt-5">
                 <section class="flex flex-row">
-                    <label class="text-gray-400 font-bold mr-20">{{ secondLabel }}</label>
-                    <span class="text-gray-400 font-bold ml-3 text-xs pt-2 ">Bal: 12345678 NGN</span>
+                    <label class="text-gray-400 mr-20 font-bold">{{ secondLabel }}</label>
+                    <span class="text-gray-400 font-bold text-xs pt-2 ">Bal: 12345678 NGN</span>
                 </section> 
                 
                 <div class="flex flex-row">
                     <input 
                     type="tel"
-                    class="w-72 h-8 mt-1 p-5 block rounded font-bold bg-gray-200"
+                    class="w-72 h-8 mt-1 p-5 block font-bold rounded bg-gray-200"
                     required
                     placeholder=""
                     @handleSecondInputChange="secondInput"
@@ -36,7 +32,7 @@
             <div class="mt-5">
                 <label class="text-gray-400 font-bold">Account</label> 
 
-                <select name="account" id="accounts" form="accountform" class="w-72 h-12 mt-1 p-2  font-bold block rounded bg-gray-200">
+                <select name="account" id="accounts" form="accountform" class="w-72 h-12 mt-1 p-2 font-bold block rounded bg-gray-200">
                     <option value="select account">Select Account</option>
                     <option value="savings">Savings</option>
                     <option value="current">Current</option>
@@ -44,27 +40,25 @@
                 </select>
             </div>
             <div class="flex flex-row mt-10 w-72 justify-between">
-                <!-- <button type="submit" @click="onClick()"  class="w-40 h-14 bg-white mr-3 text-gray-400 border-gray-400 flex text-center p-3 rounded-xl ">
-                   <img src="../../assets/img/icon/clock.svg" class="mx-auto" alt="buy later" title="buy later svg"/>
-                    Buy later
-                </button> -->
-                <BtnBuyLater text="Buy later" />
-                <FormButton text="Buy Now" color="primary"  />
+                <button type="submit" @click="sendLater()" class="flex flex-row w-32 h-14 border-2 border-gray-500 rounded-xl bg-white text-gray-400 text-sm font-bold justify-center align-middle p-4 gap-2.5">
+                    <img src="../../assets/img/icon/clock.svg" class="mx-auto" alt="send later" title="send later svg"/>
+                    Send later
+                </button>
+                
+                <button @click="sendNow()" class="w-32  h-14 ml-2 bg-primary rounded-xl font-bold text-white">
+                    Send Now
+                </button>
             </div>
         </form>
     </div>
 </template>
 
 <script lang="ts">
-import BtnBuyLater from './BtnBuyLater.vue';
-import FormButton from './BtnBuyNow.vue';
+import router from '../../router';
+
 
 export default {
-    name: 'FormInput',
-    components: {
-    FormButton,
-    BtnBuyLater
-}, 
+    name: 'FormInput', 
     props: {
         firstLabel: String,
         firstInput: String,
@@ -84,8 +78,12 @@ export default {
         handleSecondInputChange (event: any) {
             this.$emit("customChange", event.target.value.toLowerCase())
         },
-        onClick() {
-            console.log("Buy later");
+        sendLater() {
+            console.log("Send later");
+        },
+        sendNow() {
+            console.log("Send Now");
+            router.push("/funds-transfer/transaction-details");
         }
     }
 }
