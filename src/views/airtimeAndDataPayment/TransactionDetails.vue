@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <img src="../../assets/img/icon/left_arrow.svg" class="absolute left-10 top-10" alt="going back" />
+        <Back-Arrow />
+        <!-- <img src="../../assets/img/icon/left_arrow.svg" class="absolute left-10 top-10" alt="going back" /> -->
         <div class="inline-flex flex-col space-y-1 items-center justify-start p-[38%] pt-8 pb-28 bg-white">
             <p class="w-72 text-3xl font-black leading-10 text-center text-gray-900">Transaction details</p>
             <img class="w-6 h-6 rounded-lg" src="../../assets/img/icon/Rectangle.svg" alt="rectangle"/>
@@ -27,6 +28,7 @@
 
 <script lang="ts">
 import Table from '../../components/Table.vue';
+import BackArrow from '../../components/BackArrow.vue';
 
 export default {
     name: "TransactionDetails",

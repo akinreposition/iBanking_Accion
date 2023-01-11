@@ -6,6 +6,7 @@
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "preserve",
+    "types": ["vue3-toastify/global"],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,

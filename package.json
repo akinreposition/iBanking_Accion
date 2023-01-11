@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vue-router-back-button": "^1.3.2",
+    "vue3-toastify": "^0.0.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
