@@ -41,7 +41,7 @@
                             maxlength="1"
                         />
                     </div>
-                    <button type="submit" @click.prevent="openModal()" class="flex flex-col items-center w-72 h-12 p-4 mt-10 rounded-xl bg-primary text-white">
+                    <button type="submit" @click.prevent="openModal()" class="flex flex-col items-center w-72 h-12 p-3 mt-10 rounded-xl bg-primary text-white">
                         Verify
                     </button>
                     <!-- model beginns -->

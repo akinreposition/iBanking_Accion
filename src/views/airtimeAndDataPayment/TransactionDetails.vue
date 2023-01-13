@@ -7,19 +7,15 @@
             <img class="w-6 h-6 rounded-lg" src="../../assets/img/icon/Rectangle.svg" alt="rectangle"/>
 
             
-            <div class="flex flex-col items-center p-4 gap-4 w-72 h-64 mt-48 rounded-xl bg-red-100">
-                <Table 
-                    :transaction-type="transactionType"
-                    :date="date"
-                    :amount="amount"
-                    :phone-number="phoneNumber"
-                    :network="network"
+            <div class="flex flex-col items-center p-4 mb-20 gap-4 w-72 h-52 mt-48 rounded-xl bg-red-100">
+                <Table-Component 
+                    :transaction="airtimeTransaction"
                 />
 
                 
             </div>
-            <button type="button" @click.prevent="pay" class="flex flex-col items-center w-72 h-12 p-4 mt-4 rounded-xl bg-primary text-white">
-                    Pay
+            <button type="button" @click.prevent="pay()" class="flex flex-col items-center w-72 h-12 p-3 mt-4 rounded-xl bg-primary text-white">
+                Pay
             </button>
         </div>
 
@@ -27,26 +23,44 @@
 </template>
 
 <script lang="ts">
-import Table from '../../components/Table.vue';
+import TableComponent from '../../components/Table.vue';
 import BackArrow from '../../components/BackArrow.vue';
+import router from '../../router';
 
 export default {
     name: "TransactionDetails",
     data() {
         return {
-            transactionType: "Airtime",
-            // date: "12 Oct, 2021",
-            date: new Date().toLocaleString(),
-            amount: "1200",
-            phoneNumber: "0812345678",
-            network: "MTN"
+            airtimeTransaction: [
+                {
+                    label: "Transaction Type",
+                    value: "Airtime",
+                },
+                {
+                    label: "Date",
+                    value: new Date().toLocaleString(),
+                },
+                {
+                    label: "Amount",
+                    value: "1,200",
+                },
+                {
+                    label: "Phone Number",
+                    value: "0812345678",
+                },
+                {
+                    label: "Network",
+                    value: "MTN",
+                },
+            ],
         }
     },
     methods: {
         pay() {
             console.log("Click Pay!");
+            this.$router.push("/bills/confirm-transaction");
         }
     },
-    components: { Table }
+    components: { TableComponent,BackArrow, }
 }
 </script>

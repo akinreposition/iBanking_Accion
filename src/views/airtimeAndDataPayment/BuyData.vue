@@ -52,8 +52,12 @@
                     <button 
                         class="w-72 h-12  block rounded p-4 bg-gray-200 text-sm text-gray-400"
                         @click.prevent="showDataPlan"                 
-                    >Choose Data Plan</button>
-                    <Modal v-model="modalOpen"></Modal>
+                    >
+                        Choose Data Plan
+                    </button>
+
+                    <!-- <Modal v-model="modalOpen"></Modal> -->
+                    
                     <!-- <div class="modal" v-show="value">
                         <div class="container">
                             <div class="modal__title">Select Data Plan</div>
@@ -78,7 +82,7 @@
                    <img src="../../assets/img/icon/clock.svg" class="mx-auto" alt="buy later" title="buy later svg"/>
                     Buy later
                 </button> -->
-                <BtnBuyLater />
+                <BtnBuyLater  text="Send Later"/>
                 <BtnBuyNow text="Buy Now" color="primary"  />
             </div>
         </form>
@@ -111,7 +115,7 @@ export default {
             console.log("Buy later Data form");
         },
         showDataPlan() {
-            this.modalOpen = !this.modalOpen;
+            this.modalOpen = true;
             console.log("Modal button click!");
         },
     }

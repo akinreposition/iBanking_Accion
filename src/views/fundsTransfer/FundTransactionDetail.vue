@@ -13,7 +13,7 @@
 
                 
             </div>
-            <button type="submit" @click.prevent="openModal()" class="flex flex-col items-center w-72 h-12 p-4 mt-4 rounded-xl bg-primary text-white">
+            <button type="submit" @click.prevent="openModal()" class="flex flex-col items-center w-72 h-12 p-3 mt-4 rounded-xl bg-primary text-white">
                 Pay
             </button>
 
@@ -26,8 +26,8 @@
 
                 <template v-slot:body>
                     
-                    <h2 class="text-center text-lg leading-normal mt-8 font-bold justify-center align-middle md:ml-10">Transaction successful</h2>
-                    <span class=" font-bold text-base ml-4 p-5 mt-4 flex">
+                    <h2 class="text-center text-lg leading-normal mt-8 font-bold justify-center align-middle mx-auto">Transaction successful</h2>
+                    <span class=" font-bold text-center p-5 mt-4 flex">
                         You have succesfully sent ₦12,000 to beneficiary
                     </span>
                     
@@ -37,7 +37,7 @@
                     <div class="flex flex-col space-x-1 items-center justify-start  bg-white">
                         <button 
                             type="submit"
-                            class="w-80 h-12 font-bold ml-8 mt-2 mb-6 text-white rounded-md border-primary bg-primary border"
+                            class="w-32 md:w-72 h-12 font-bold ml-3 md:ml-4 mt-2 mb-6 text-white rounded-md border-primary bg-primary border"
                             @click.prevent="close()"
                             aria-label="Continue" 
                         >
@@ -61,7 +61,7 @@ import Modal from '../../components/Modal.vue';
 
 export default {
     name: "FundTransactionDetails",
-    components: { TableComponent, Modal },
+    components: { TableComponent, BackArrow, Modal },
     data() {
         return {
             transaction : [

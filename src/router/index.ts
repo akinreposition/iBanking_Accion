@@ -22,13 +22,6 @@ const router = createRouter({
 			name: 'airtime',
 			// component: lazyLoadAirtimeAndDataTransaction('airtime.vue'),
 			component: () => import('../views/airtimeAndDataPayment/airtime.vue'),
-			// children: [
-			// 	{
-			// 		path:"/bills/data",
-			// 		name:'BuyData',
-			// 		component: () => import('../views/airtimeAndDataPayment/BuyData.vue')
-			// 	},
-			// ]
 		},
 		{
 			path:"/bills/data",
