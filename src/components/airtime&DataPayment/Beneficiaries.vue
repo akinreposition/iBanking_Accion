@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="inline-flex items-start w-72 mt-5 justify-start">
+        <div class="inline-flex items-start w-72 mt-2 justify-start">
             <p class="ml-0 text-left text-gray-400">Beneficiaries</p>
             <span class="ml-28 flex text-right text-gray-400">View all <img class="" src="../../assets/img/icon/right_arrow.svg"/> </span>
         </div>

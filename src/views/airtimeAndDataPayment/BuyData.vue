@@ -17,6 +17,7 @@
         </div>
 
         <Beneficiaries />
+        
         <!-- <FormInput 
             firstLabel="Phone number"
             @customChange="firstInput"
@@ -57,7 +58,7 @@
                     </button>
 
                     <!-- <Modal v-model="modalOpen"></Modal> -->
-                    
+
                     <!-- <div class="modal" v-show="value">
                         <div class="container">
                             <div class="modal__title">Select Data Plan</div>

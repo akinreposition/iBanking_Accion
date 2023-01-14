@@ -27,7 +27,7 @@
                 <template v-slot:body>
                     
                     <h2 class="text-center text-lg leading-normal mt-8 font-bold justify-center align-middle mx-auto">Transaction successful</h2>
-                    <span class=" font-bold text-center p-5 mt-4 flex">
+                    <span class=" font-bold text-center justify-center align-middle mx-auto p-5 mt-4 flex">
                         You have succesfully sent ₦12,000 to beneficiary
                     </span>
                     
