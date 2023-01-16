@@ -3,7 +3,6 @@
         <div  :key="ben.id" v-for="ben in beneficiaries" class="mt-3 w-auto mx-auto px-auto">
             <div :style="{background: color}" class="avatar-css p-3">
                 <p class="text-white text-sm text-center">{{ ben.firstName.charAt(0) }} {{ ben.lastName.charAt(0) }}</p>
-                <!-- <p class="text-white mt-5 pt-3 ml-4">JA</p> -->
             </div>
             <p class="text-center w-12 font-normal">{{ ben.firstName}} {{ ben.lastName}}</p>
         </div>
@@ -14,11 +13,6 @@
 export default {
     name: 'BeneficiariesAvatar',
     props: [ 'beneficiaries', 'color']
-    // props: {
-    //     beneficiaries: Array,
-    //     // color: String
-    // }
-
 }
 </script>
 
