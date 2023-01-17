@@ -2,13 +2,17 @@
     <div class="w-72">
         <form>
             <div class="mt-5">
-                <label class="text-gray-400 font-bold">{{ firstLabel }}</label>
+                <section class="inline-flex flex-row">
+                    <label class="text-gray-400 font-bold">{{ firstLabel }}</label>
+                    <img src="../../assets/img/icon/marked_green.svg" class="ml-5" alt="account name"/>
+                    <span class="text-gray-400 font-bold text-xs ml-2 pt-1">Abiola James Adeniran</span>
+                </section>
                 <div class="flex flex-row">
                     <input 
-                    type="number"
-                    class="w-72 h-8 mt-1 block rounded p-5 bg-gray-200"
-                    required
-                    @handleFirstInputChange="firstInput"
+                        type="number"
+                        class="w-72 h-8 mt-1 block rounded p-5 bg-gray-200"
+                        required
+                        @handleFirstInputChange="firstInput"
                     />
                      
                 </div> 
@@ -16,17 +20,17 @@
             <div class="mt-5">
                 <section class="flex flex-row">
                     <label class="text-gray-400 mr-20 font-bold">{{ secondLabel }}</label>
-                    <span class="text-gray-400 font-bold text-xs pt-2 ">Bal: 12345678 NGN</span>
+                    <span class="text-gray-400 font-bold text-xs pt-2 ml-9">Bal: 12345678 NGN</span>
                 </section> 
                 
                 <div class="flex flex-row">
                     <input 
-                    type="tel"
-                    class="w-72 h-8 mt-1 p-5 block font-bold rounded bg-gray-200"
-                    required
-                    placeholder=""
-                    @handleSecondInputChange="secondInput"
-                />
+                        type="tel"
+                        class="w-72 h-8 mt-1 p-5 block font-bold rounded bg-gray-200"
+                        required
+                        placeholder=""
+                        @handleSecondInputChange="secondInput"
+                    />
                 </div>
             </div>
             <div class="mt-5">
@@ -41,7 +45,7 @@
             </div>
             <div class="flex flex-row mt-10 w-72 justify-between">
                 <button type="submit" @click="sendLater()" class="flex flex-row w-32 h-14 border-2 border-gray-500 rounded-xl bg-white text-gray-400 text-sm font-bold justify-center align-middle p-4 gap-2.5">
-                    <img src="../../assets/img/icon/clock.svg" class="mx-auto" alt="send later" title="send later svg"/>
+                    <img src="../../assets/img/icon/clock.svg" class="mx-auto w-4 h-4 mt-1" alt="send later" title="send later svg"/>
                     Send later
                 </button>
                 

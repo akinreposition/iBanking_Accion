@@ -8,7 +8,7 @@
             </tr>
         </thead> -->
         <tbody>
-            <tr v-for="data in transaction" :key="data.label">
+            <tr v-for="data in transactions" :key="data.label">
                 <td class="text-stroke font-semibold text-xs inline-flex">{{ data.label }}</td>
                 <td class="text-right font-semibold">{{ data.value }}</td>                
             </tr>
@@ -20,8 +20,7 @@
 <script lang="ts">
 export default {
     name: 'Table',
-    props: [ 'transaction'],
-    
-    
+    props: [ 'transactions'],
+        
 }
 </script>

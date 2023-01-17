@@ -8,7 +8,7 @@
             
             <div class="flex flex-col items-center p-4 gap-4 w-72 h-64 mt-48 rounded-xl bg-red-100">
                 <Table-Component 
-                    :transaction="transaction"
+                    :transactions= "transactions"
                 />
 
                 
@@ -64,7 +64,7 @@ export default {
     components: { TableComponent, BackArrow, Modal },
     data() {
         return {
-            transaction : [
+            transactions : [
             {   
                 label: "Transaction Type", 
                 value: "Funds Transfer"
