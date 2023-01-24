@@ -28,6 +28,7 @@
                         type="tel"
                         class="w-72 h-8 mt-1 p-5 block font-bold rounded bg-gray-200"
                         required
+                        maxlength="11"
                         placeholder=""
                         @handleSecondInputChange="secondInput"
                     />
@@ -36,11 +37,8 @@
             <div class="mt-5">
                 <label class="text-gray-400 font-bold">Account</label> 
 
-                <select name="account" id="accounts" form="accountform" class="w-72 h-12 mt-1 p-2 font-bold block rounded bg-gray-200">
-                    <option value="select account">Select Account</option>
-                    <option value="savings">Savings</option>
-                    <option value="current">Current</option>
-                    <option value="fixed">Fixed</option>
+                <select name="account" v-model="selected" class="w-72 h-12 mt-1 p-2 font-bold block rounded bg-gray-200">
+                    <option v-for="option in options" :value="option.value" :key="option.account">{{ option.account }}</option>
                 </select>
             </div>
             <div class="flex flex-row mt-10 w-72 justify-between">
@@ -59,8 +57,6 @@
 
 <script lang="ts">
 import router from '../../router';
-
-
 export default {
     name: 'FormInput', 
     props: {
@@ -73,6 +69,12 @@ export default {
         return {
             phoneNumber: "",
             amount:"",
+            selected: '',
+            options: [
+                { account: 'saving', value: 'saving'},
+                { account: 'current', value: 'current'},
+                { account: 'fixed', value: 'fixed'},
+            ]
         }
     },
     methods: {
