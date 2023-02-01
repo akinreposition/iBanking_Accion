@@ -17,6 +17,42 @@ const router = createRouter({
 			path: '/',
 			component: () => import('../views/home.vue')
 		},
+		// Application Dashboard Begins
+		{
+			path: '/dashboard',
+			name: 'Application Dashboard',
+			component: () => import('../views/dashboard/ApplicationDashboard.vue'),
+			children: [
+				// {
+				// 	path: '/overview',
+				// 	name: 'Overview',
+				// 	component: () => import('../views/dashboard/Overview.vue'),
+				// },
+				{
+					path: '/dashboard/wallet',
+					name: 'Wallet',
+					component: () => import('../views/dashboard/Wallet.vue'),
+				},
+				{
+					path: '/dashboard/loans',
+					name: 'Loans',
+					component: () => import('../views/dashboard/Loans.vue'),
+				},
+				{
+					path: "/dashboard/plans",
+					name: 'Plans',
+					component: () => import('../views/dashboard/Plans.vue'),
+				},
+				{
+					path: "/dashboard/cards",
+					name: 'Cards',
+					component: () => import('../views/dashboard/Cards.vue'),
+				},
+			]
+		},	  
+		// Application Dashboard Ends
+
+		// Bill Payment Begins
 		{
 			path: '/bills',
 			name: 'airtime',
